@@ -29,7 +29,7 @@ class JobRequest extends FormRequest
             'title'             => ['required', 'string', 'max:190'],
             'steps'             => ['nullable', 'array'],
             'steps.*'           => ['nullable', 'string'],
-            'proof_details'     => ['required', 'string'],
+            'proof_details'     => ['nullable', 'string'],
             'image'             => ['nullable', 'image', 'max:510'],
             'num_of_worker'     => ['required', 'numeric'],
             'per_worker_amount' => ['required', 'numeric'],

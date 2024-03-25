@@ -87,7 +87,7 @@
                                     <label for="proof_details">{{__('Required proof the job was Completed ')}}</label>
                                     <textarea name="proof_details" id="proof_details" rows="4"
                                               class="form-control @error('proof_details') is-invalid @enderror"
-                                              required>{{ old('proof_details') }}</textarea>
+                                              >{{ old('proof_details') }}</textarea>
                                     @error('proof_details')
                                     <p class="text-danger">{{ $message }}</p>
                                     @enderror

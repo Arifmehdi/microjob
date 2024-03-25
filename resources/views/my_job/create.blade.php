@@ -71,14 +71,23 @@
                                     @error('steps')
                                     <p class="text-danger">{{ $message }}</p>
                                     @enderror
-                                    <button type="button" class="btn btn-info"
-                                            id="add-job-step">{{ __('Add Step') }}</button>
+                                    {{-- <button type="button" class="btn btn-info"
+                                            id="add-job-step">{{ __('Add Step') }}</button> --}}
+                                </div>
+                                <div class="form-group">
+                                    <label for="link">{{ __('Paste an accurate job Link') }}</label>
+                                    <input type="url" name="link" id="link"
+                                           class="form-control @error('link') is-invalid @enderror"
+                                           value="{{ old('link') }}" required>
+                                    @error('link')
+                                    <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="proof_details">{{__('Required proof the job was Completed ')}}</label>
                                     <textarea name="proof_details" id="proof_details" rows="4"
                                               class="form-control @error('proof_details') is-invalid @enderror"
-                                              required>{{ old('proof_details') }}</textarea>
+                                              >{{ old('proof_details') }}</textarea>
                                     @error('proof_details')
                                     <p class="text-danger">{{ $message }}</p>
                                     @enderror
