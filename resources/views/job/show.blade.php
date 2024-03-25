@@ -68,6 +68,13 @@
                     </div>
                     <div class="card component-card_9 w-100 mt-4">
                         <div class="card-body">
+                            <h6>{{ __('See your work link') }}</h6>
+                            <hr>
+                            <a href="{{ $job->link ?? '#' }}" target="_blank">{{ $job->link ?? '' }}</a>
+                        </div>
+                    </div>
+                    <div class="card component-card_9 w-100 mt-4">
+                        <div class="card-body">
                             <h6>{{ __('Submit required work Prove') }}</h6>
                             <hr>
                             <div class="form-group">

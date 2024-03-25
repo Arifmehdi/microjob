@@ -51,7 +51,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            {{--<div class="col-md-12">
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="description">{{ __('Description') }}</label>
@@ -62,7 +62,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="image">{{ __('Thumbnail Image') }}</label>

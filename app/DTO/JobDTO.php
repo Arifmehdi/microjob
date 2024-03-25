@@ -12,6 +12,7 @@ class JobDTO extends DataTransferObject {
     public $user_id;
     public $category_id;
     public $title;
+    public $link;
     public $proof_details;
     public $num_of_worker;
     public $per_worker_amount;
@@ -37,6 +38,7 @@ class JobDTO extends DataTransferObject {
             'user_id'           => Auth::id(),
             'category_id'       => $request->filled( 'category' ) ? $request->input( 'category' ) : $request->input( 'parent_category' ),
             'title'             => $request->input( 'title' ),
+            'link'             => $request->input( 'link' ),
             'proof_details'     => $request->input( 'proof_details' ),
             'num_of_worker'     => $request->input( 'num_of_worker' ),
             'per_worker_amount' => $request->input( 'per_worker_amount' ),
@@ -56,6 +58,7 @@ class JobDTO extends DataTransferObject {
             'user_id'           => $this->user_id,
             'category_id'       => $this->category_id,
             'title'             => $this->title,
+            'link'             => $this->link,
             'proof_details'     => $this->proof_details,
             'num_of_worker'     => $this->num_of_worker,
             'per_worker_amount' => $this->per_worker_amount,

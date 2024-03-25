@@ -9,6 +9,7 @@ class FileManagementServices
 
     public function updateImage($file, $old_image = '', $directory = 'upload', $prefix = ''): string
     {
+        // dd($directory);
         $file_ext  = $file->getClientOriginalExtension();
         $directory = rtrim($directory, ' /,');
         //Check And Create Directory

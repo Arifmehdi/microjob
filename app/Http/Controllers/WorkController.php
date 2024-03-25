@@ -22,7 +22,7 @@ class WorkController extends Controller
     {
         $request->validate([
             'job'           => ['required', 'integer'],
-            'proof_details' => ['required', 'string'],
+            'proof_details' => ['nullable', 'string'],
             'screenshots'   => ['required', 'array'],
             'screenshots.*' => ['required', 'image', 'mimes:png,jpg,jpeg,gif,webp,svg'],
         ]);
@@ -34,6 +34,7 @@ class WorkController extends Controller
             ]);
             return redirect()->route('jobs');
         }
+        // dd($request->all());
         $screenshots = [];
         if ($request->has('screenshots')) {
             foreach ($request->screenshots as $screenshot) {

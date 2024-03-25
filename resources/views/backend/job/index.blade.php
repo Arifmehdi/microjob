@@ -31,6 +31,7 @@
                             <th>#ID</th>
                             <th>Image</th>
                             <th>Title</th>
+                            {{-- <th>Link</th> --}}
                             <th>Author</th>
                             <th>Category</th>
                             <th>Amount</th>
@@ -46,6 +47,7 @@
                                 <td><img src="{{ asset('storage/upload/'.$job->image ?? '') }}" alt="Thumbnail"
                                          width="70"></td>
                                 <td>{{ str()->limit($job->title,20) ?? '' }}</td>
+                                {{-- <td>{{ str()->limit($job->link,20) ?? '' }}</td> --}}
                                 <td>{{ $job->user ? $job->user->name:'' }}</td>
                                 <td>{{ $job->category ? $job->category->name:'' }}</td>
                                 <td>{{  balanceFormat($job->estimated_cost ?? 0) }}</td>
@@ -102,6 +104,7 @@
                             <th>#ID</th>
                             <th>Image</th>
                             <th>Title</th>
+                            {{-- <th>Link</th> --}}
                             <th>Author</th>
                             <th>Category</th>
                             <th>Amount</th>

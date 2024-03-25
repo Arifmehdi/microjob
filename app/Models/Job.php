@@ -21,6 +21,7 @@ class Job extends Model
         'user_id',
         'category_id',
         'title',
+        'link',
         'slug',
         'description',
         'proof_details',

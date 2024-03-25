@@ -19,6 +19,7 @@ return new class extends Migration {
             // $table->tinyText('title');
             // $table->tinyText('slug')->unique();
             $table->string('title');
+            $table->string('link')->nullable();
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->text('proof_details')->nullable();

@@ -60,8 +60,9 @@ class JobController extends Controller
 
             return redirect()->route('admin.jobs.create');
         }
-        try {
-            DB::transaction(function () use ($jobData) {
+        // try {
+           $check =  DB::transaction(function () use ($jobData) {
+
                 if ($jobData->estimated_cost > Auth::user()->balance) {
                     throw new \Exception();
                 }
@@ -77,16 +78,17 @@ class JobController extends Controller
                 }
                 Auth::user()->update(['balance' => DB::raw('balance - '.$jobData->estimated_cost)]);
             });
+            // dd($check);
             Session::flash('toast', [
                 'type' => 'success',
                 'msg'  => 'Job Posted!'
             ]);
-        } catch (\Exception $e) {
-            Session::flash('toast', [
-                'type' => 'danger',
-                'msg'  => 'Failed To Post Job!',
-            ]);
-        }
+        // } catch (\Exception $e) {
+        //     Session::flash('toast', [
+        //         'type' => 'danger',
+        //         'msg'  => 'Failed To Post Job!',
+        //     ]);
+        // }
 
         return redirect()->route('admin.jobs.index');
     }

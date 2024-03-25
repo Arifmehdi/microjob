@@ -7,7 +7,8 @@
     <link href="{{ asset('backend/assets/css/components/custom-carousel.css') }}" rel="stylesheet" type="text/css"/>
 @endpush
 @section('content')
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    {{-- remove slider 250324 --}}
+    {{--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active m"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -36,7 +37,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div>--}}
     <div class="jobs-section py-md-5 py-4 bg-2nd">
         <div class="container">
             <div class="row justify-content-center">
