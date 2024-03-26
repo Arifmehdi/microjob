@@ -60,7 +60,7 @@
                                     <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <div class="job-steps pb-3">
+                                <div class="job-steps pb-3" style="display:none">
                                     <div class="form-group mb-2">
                                         <label>{{__('What specific tasks need to be Completed')}}</label>
                                         <div class="step-box py-2">
@@ -83,7 +83,7 @@
                                     <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="display:none">
                                     <label for="proof_details">{{__('Required proof the job was Completed ')}}</label>
                                     <textarea name="proof_details" id="proof_details" rows="4"
                                               class="form-control @error('proof_details') is-invalid @enderror"
@@ -119,7 +119,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="row py-2 align-items-center">
+                                        <div class="row py-2 align-items-center" style="display:none">
                                             <div class="col-md-6">
                                                 <label for="per_worker_amount">{{ __('Each worker Earn') }}</label>
                                             </div>
@@ -133,7 +133,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="row py-2 align-items-center">
+                                        <div class="row py-2 align-items-center" style="display:none">
                                             <div class="col-md-6">
                                                 <label for="num_of_screenshot">{{ __('Require Screenshots') }}</label>
                                             </div>
@@ -146,7 +146,7 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="row py-2 align-items-center">
+                                        <div class="row py-2 align-items-center" style="display:none">
                                             <div class="col-md-6">
                                                 <label for="estimated_day">{{ __('Estimated Day') }}</label>
                                             </div>
